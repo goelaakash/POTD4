@@ -1,0 +1,1 @@
+class Solution { public: int solve(int a, int b) { // code here if(a == b) return 0; int abits = 0; int bbits = 0; for(int i = 31 ; i >= 0 ; i--) { int abit = (a >> i)&1; int bbit = (b >> i)&1; if(abit == bbit) continue; else if(abit == 1) abits++; else bbits++; } if(abits == 0 || bbits == 0) return 1; return 2; } };
